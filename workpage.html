@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Portfolio | Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+        }
+
+        .section-bg {
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end; 
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .hero-section {
+            width: 1920px; 
+            height: 1080px; 
+        }
+
+        @media (min-width: 640px) {
+            .section-bg {
+                min-height: 100vh;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <header class="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center bg-transparent">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+            <!-- NOTE: Using placeholder image path as the original file './images/logomnd.png' is not available in the sandbox environment. -->
+            <img src="./images/logomnd.png" alt="MDN Production Logo" class="h-15 w-auto">
+        </a>
+        <nav class="hidden md:flex space-x-8 text-white text-sm font-medium">
+            <a href="#home" class="hover:text-gray-300 transition duration-300">Home</a>
+            <a href="#contact" class="hover:text-gray-300 transition duration-300">Get In Touch</a>
+        </nav>
+        <button class="md:hidden p-2 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+        </header>
+
+        <main>
+            <!--Section One-->
+            <!-- NOTE: Placeholder image path used for visibility, replace with your actual paths like './images/workpage_one.png' -->
+            <section id="hero-one" class="section-bg hero-section" style="background-image: url('./images/workpage_one.png');"></section>
+            <!--Section Two-->
+            <section id="hero-two" class="section-bg hero-section" style="background-image: url('./images/workpage_two.png');"></section>
+            <!--Section Three-->
+            <section id="hero-three" class="section-bg hero-section" style="background-image: url('./images/workpage_three.png');"></section>
+            <!--Section Four-->
+            <section id="hero-four" class="section-bg hero-section" style="background-image: url('./images/workpage_fourfive.png');"></section>
+            <!--Section Five-->
+            <section id="hero-five" class="section-bg hero-section" style="background-image: url('./images/workpage_six.png');"></section>
+            <!--Section Six-->
+            <section id="hero-six" class="section-bg hero-section" style="background-image: url('./images/workpage_seven.png');"></section>
+            <!--Section Seven-->
+            <section class="h-screen flex flex-col justify-center items-center text-center text-white p-6 relative" 
+                style="background-image: url('./images/bg.jpg'); background-size: cover; background-position: center;">
+        
+                <!-- Overlay to ensure text visibility -->
+                <div class="absolute inset-0 bg-black opacity-30"></div> 
+
+                <div class="relative z-10 flex flex-col items-center">
+            
+                    <h2 class="text-6xl sm:text-7xl font-light mb-12 max-w-4xl leading-tight">
+                    Great minds <br> create together
+                    </h2>
+            
+                    <a href="#works" class="bg-white text-black py-3 px-10 rounded-lg text-lg font-medium hover:bg-gray-200 transition duration-300 shadow-xl tracking-wider">
+                    Our Works
+                    </a>
+ 
+                    <div class="mt-20 space-x-6 text-lg font-light">
+                        <a href="https://www.instagram.com/mnd.production.id/" class="hover:underline transition duration-300" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="#" class="hover:underline transition duration-300">YouTube</a>
+                        <a href="#" class="hover:underline transition duration-300">LinkedIn</a>
+                    </div>
+                </div>
+        
+
+                <p class="absolute bottom-6 left-6 text-xs text-white/70">
+                    ©2025 MND Production
+                </p>
+            </section>
+        </main>
+
+    </body>
+    </html>
